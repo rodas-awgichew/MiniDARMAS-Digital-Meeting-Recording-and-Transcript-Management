@@ -43,7 +43,7 @@
             this.dgvRecordings.Name = "dgvRecordings";
             this.dgvRecordings.RowHeadersWidth = 51;
             this.dgvRecordings.RowTemplate.Height = 24;
-            this.dgvRecordings.Size = new System.Drawing.Size(364, 227);
+            this.dgvRecordings.Size = new System.Drawing.Size(347, 227);
             this.dgvRecordings.TabIndex = 0;
             // 
             // lblTranscriber

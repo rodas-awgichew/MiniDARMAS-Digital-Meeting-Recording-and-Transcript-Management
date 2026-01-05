@@ -61,9 +61,18 @@ namespace MiniDARMAS
             int userId = Convert.ToInt32(
                 dgvUsers.CurrentRow.Cells["UserId"].Value);
 
-            UserData.DeactivateUser(userId);
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to permanently delete this user?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            dgvUsers.DataSource = UserData.GetAllUsers();
+            if (result == DialogResult.Yes)
+            {
+                UserData.DeleteUser(userId);
+                dgvUsers.DataSource = UserData.GetAllUsers();
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

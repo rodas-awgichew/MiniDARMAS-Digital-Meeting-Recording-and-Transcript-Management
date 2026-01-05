@@ -77,7 +77,7 @@
             this.lblDocument.Name = "lblDocument";
             this.lblDocument.Size = new System.Drawing.Size(136, 16);
             this.lblDocument.TabIndex = 3;
-            this.lblDocument.Text = "Supporting Document";
+            this.lblDocument.Text = "Supporting Dcoument";
             // 
             // txtAgendaTitle
             // 

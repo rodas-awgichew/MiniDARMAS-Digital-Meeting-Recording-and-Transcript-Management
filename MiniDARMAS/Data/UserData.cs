@@ -101,5 +101,22 @@ namespace MiniDARMAS.Data
             }
         }
 
+        public static void DeleteUser(int userId)
+        {
+            using (SqlConnection conn = DbHelper.GetConnection())
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM Users WHERE UserId = @id",
+                    conn
+                );
+
+                cmd.Parameters.AddWithValue("@id", userId);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
     }
 }

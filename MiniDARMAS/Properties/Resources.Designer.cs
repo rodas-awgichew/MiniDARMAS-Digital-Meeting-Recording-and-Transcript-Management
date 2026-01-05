@@ -73,6 +73,16 @@ namespace MiniDARMAS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guide_bg {
+            get {
+                object obj = ResourceManager.GetObject("guide-bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginForm_flag {
             get {
                 object obj = ResourceManager.GetObject("loginForm flag", resourceCulture);

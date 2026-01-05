@@ -56,21 +56,26 @@ namespace MiniDARMAS.Data
                 conn.Open();
 
                 string sql = @"
-                SELECT
-                    a.AssignmentId,
-                    m.MeetingNo,
-                    ag.Title AS AgendaTitle,
-                    r.AudioFilePath,
-                    s.StatusName
-                FROM Assignments a
-                JOIN Recordings r ON a.RecordingId = r.RecordingId
-                JOIN Agendas ag ON r.AgendaId = ag.AgendaId
-                JOIN Meetings m ON ag.MeetingId = m.MeetingId
-                JOIN StatusLookup s ON a.StatusId = s.StatusId
-                WHERE a.TranscriberId = @userId";
+        SELECT
+            a.AssignmentId,
+            m.MeetingNo,
+            ag.Title AS AgendaTitle,
+            r.AudioFilePath,
+            s.StatusName
+        FROM Assignments a
+        JOIN Recordings r ON a.RecordingId = r.RecordingId
+        JOIN Agendas ag ON r.AgendaId = ag.AgendaId
+        JOIN Meetings m ON ag.MeetingId = m.MeetingId
+        JOIN StatusLookup s ON a.StatusId = s.StatusId
+        WHERE a.TranscriberId = @userId
+          AND a.StatusId = @status";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.SelectCommand.Parameters.AddWithValue("@userId", userId);
+                da.SelectCommand.Parameters.AddWithValue(
+                    "@status", StatusIds.Assigned
+                );
+
                 da.Fill(dt);
             }
 

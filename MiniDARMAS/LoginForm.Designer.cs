@@ -38,13 +38,15 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(84, 136);
+            this.lblUsername.Location = new System.Drawing.Point(99, 117);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(70, 16);
             this.lblUsername.TabIndex = 0;
@@ -53,7 +55,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(84, 203);
+            this.lblPassword.Location = new System.Drawing.Point(99, 168);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 16);
             this.lblPassword.TabIndex = 1;
@@ -61,22 +63,22 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(189, 136);
+            this.txtUsername.Location = new System.Drawing.Point(189, 117);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(136, 22);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+        
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(189, 203);
+            this.txtPassword.Location = new System.Drawing.Point(189, 165);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(136, 22);
             this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(114, 271);
+            this.btnLogin.Location = new System.Drawing.Point(102, 281);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(101, 23);
             this.btnLogin.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(245, 271);
+            this.btnClear.Location = new System.Drawing.Point(245, 281);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 23);
             this.btnClear.TabIndex = 6;
@@ -104,7 +106,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(379, 271);
+            this.btnExit.Location = new System.Drawing.Point(389, 281);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(86, 23);
             this.btnExit.TabIndex = 7;
@@ -122,11 +124,37 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbRole
+            // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Operator",
+            "Transcriber",
+            "Editor",
+            "Approver"});
+            this.cmbRole.Location = new System.Drawing.Point(189, 214);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(121, 24);
+            this.cmbRole.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(99, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Role";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 342);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
@@ -139,6 +167,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,6 +185,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.Label label1;
     }
 }
 

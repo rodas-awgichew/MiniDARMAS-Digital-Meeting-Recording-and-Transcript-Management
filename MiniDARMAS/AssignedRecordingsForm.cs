@@ -59,6 +59,10 @@ namespace MiniDARMAS
                 new TranscriptionForm(assignmentId);
 
             f.ShowDialog();
+     
+            //  RELOAD after transcription is submitted
+            LoadAssignedRecordings();
+
         }
 
         private void backBtn_Click(object sender, EventArgs e)

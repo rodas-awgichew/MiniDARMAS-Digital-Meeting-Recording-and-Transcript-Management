@@ -93,11 +93,73 @@ namespace MiniDARMAS.Data
                     conn
                 );
 
+
+
                 cmd.Parameters.Add("@aid", SqlDbType.Int).Value = assignmentId;
                 cmd.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
                 cmd.Parameters.Add("@status", SqlDbType.Int).Value = StatusIds.UnderReview;
 
                 cmd.ExecuteNonQuery();
+                SqlCommand acmd = new SqlCommand(
+                           @"UPDATE Assignments
+                           SET StatusId = @status
+                           WHERE AssignmentId = @aid",
+                 conn
+               );
+
+                acmd.Parameters.AddWithValue("@status", StatusIds.UnderReview);
+                acmd.Parameters.AddWithValue("@aid", assignmentId);
+
+                acmd.ExecuteNonQuery();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
         }
 

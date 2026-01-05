@@ -130,11 +130,12 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(246, 82);
+            this.lblWelcome.Location = new System.Drawing.Point(263, 90);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(171, 16);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome to Mini-DARMAS!";
+            
             // 
             // grpAdminStats
             // 

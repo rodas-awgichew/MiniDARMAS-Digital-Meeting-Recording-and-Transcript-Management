@@ -31,7 +31,6 @@
             this.dgvMeetings = new System.Windows.Forms.DataGridView();
             this.lblMeetingNo = new System.Windows.Forms.Label();
             this.txtMeetingNo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblChairperson = new System.Windows.Forms.Label();
@@ -41,17 +40,18 @@
             this.btnDeleteMeeting = new System.Windows.Forms.Button();
             this.btnManageAgendas = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMeetings)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMeetings
             // 
             this.dgvMeetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMeetings.Location = new System.Drawing.Point(37, 259);
+            this.dgvMeetings.Location = new System.Drawing.Point(12, 259);
             this.dgvMeetings.Name = "dgvMeetings";
             this.dgvMeetings.RowHeadersWidth = 51;
             this.dgvMeetings.RowTemplate.Height = 24;
-            this.dgvMeetings.Size = new System.Drawing.Size(721, 168);
+            this.dgvMeetings.Size = new System.Drawing.Size(776, 168);
             this.dgvMeetings.TabIndex = 0;
             // 
             // lblMeetingNo
@@ -67,15 +67,8 @@
             // 
             this.txtMeetingNo.Location = new System.Drawing.Point(173, 33);
             this.txtMeetingNo.Name = "txtMeetingNo";
-            this.txtMeetingNo.Size = new System.Drawing.Size(100, 22);
+            this.txtMeetingNo.Size = new System.Drawing.Size(123, 22);
             this.txtMeetingNo.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(173, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
             // 
             // lblDate
             // 
@@ -108,19 +101,19 @@
             // 
             this.txtLocation.Location = new System.Drawing.Point(173, 114);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(100, 22);
+            this.txtLocation.Size = new System.Drawing.Size(123, 22);
             this.txtLocation.TabIndex = 7;
             // 
             // txtChairperson
             // 
             this.txtChairperson.Location = new System.Drawing.Point(173, 157);
             this.txtChairperson.Name = "txtChairperson";
-            this.txtChairperson.Size = new System.Drawing.Size(100, 22);
+            this.txtChairperson.Size = new System.Drawing.Size(123, 22);
             this.txtChairperson.TabIndex = 8;
             // 
             // btnAddMeeting
             // 
-            this.btnAddMeeting.Location = new System.Drawing.Point(37, 198);
+            this.btnAddMeeting.Location = new System.Drawing.Point(82, 207);
             this.btnAddMeeting.Name = "btnAddMeeting";
             this.btnAddMeeting.Size = new System.Drawing.Size(103, 23);
             this.btnAddMeeting.TabIndex = 9;
@@ -130,7 +123,7 @@
             // 
             // btnDeleteMeeting
             // 
-            this.btnDeleteMeeting.Location = new System.Drawing.Point(183, 198);
+            this.btnDeleteMeeting.Location = new System.Drawing.Point(252, 207);
             this.btnDeleteMeeting.Name = "btnDeleteMeeting";
             this.btnDeleteMeeting.Size = new System.Drawing.Size(113, 23);
             this.btnDeleteMeeting.TabIndex = 10;
@@ -140,7 +133,7 @@
             // 
             // btnManageAgendas
             // 
-            this.btnManageAgendas.Location = new System.Drawing.Point(345, 198);
+            this.btnManageAgendas.Location = new System.Drawing.Point(415, 207);
             this.btnManageAgendas.Name = "btnManageAgendas";
             this.btnManageAgendas.Size = new System.Drawing.Size(132, 23);
             this.btnManageAgendas.TabIndex = 11;
@@ -158,11 +151,20 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(173, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 22);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.Value = new System.DateTime(2026, 1, 4, 15, 52, 28, 0);
+            // 
             // MeetingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.btnManageAgendas);
             this.Controls.Add(this.btnDeleteMeeting);
@@ -172,7 +174,6 @@
             this.Controls.Add(this.lblChairperson);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMeetingNo);
             this.Controls.Add(this.lblMeetingNo);
             this.Controls.Add(this.dgvMeetings);
@@ -190,7 +191,6 @@
         private System.Windows.Forms.DataGridView dgvMeetings;
         private System.Windows.Forms.Label lblMeetingNo;
         private System.Windows.Forms.TextBox txtMeetingNo;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.Label lblChairperson;
@@ -200,5 +200,6 @@
         private System.Windows.Forms.Button btnDeleteMeeting;
         private System.Windows.Forms.Button btnManageAgendas;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.DateTimePicker textBox1;
     }
 }
