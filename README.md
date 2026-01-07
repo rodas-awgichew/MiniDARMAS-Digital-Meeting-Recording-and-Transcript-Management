@@ -48,12 +48,6 @@ Project layout (key files)
 - Fork the repo, create a branch for your feature/fix, commit, and open a pull request.
 - Keep changes small and focused. Include a brief description of the change and any setup steps.
 
-## Known improvements / TODO
-- Add persistent storage (database or encrypted local store)
-- Implement role-based authentication and secure credential handling
-- Improve error handling and user feedback
-- Add unit tests and CI pipeline
-
 ## License
 Specify a license (e.g., MIT) in `LICENSE` if you intend to open-source.
 
