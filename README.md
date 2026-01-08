@@ -42,7 +42,6 @@ Project layout (key files)
 
 ## Configuration
 - Review `MiniDARMAS\Data\AssignmentData.cs` for where and how data is stored/managed. Adjust persistence or connection settings as needed.
-- Add secure credential storage and proper persistence before production use.
 
 ## Contributing
 - Fork the repo, create a branch for your feature/fix, commit, and open a pull request.
