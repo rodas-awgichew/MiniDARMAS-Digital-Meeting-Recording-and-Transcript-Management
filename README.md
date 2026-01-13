@@ -47,8 +47,6 @@ Project layout (key files)
 - Fork the repo, create a branch for your feature/fix, commit, and open a pull request.
 - Keep changes small and focused. Include a brief description of the change and any setup steps.
 
-## License
-Specify a license (e.g., MIT) in `LICENSE` if you intend to open-source.
 
 ## Contact
 For questions or contributions, open an issue or submit a pull request on the repository.
